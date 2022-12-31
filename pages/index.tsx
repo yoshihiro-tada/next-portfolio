@@ -56,136 +56,144 @@ export default function Home() {
         <section className={styles.section}>
           <h2>Profile</h2>
           <div className={stylesProfile.profileFlex}>
-            <Box sx={{ border: 1, borderRadius: '50%', width: '202px', height: '202px' }}>
-              <Image src="/profile.png" alt="プロフィール写真" width={200} height={200} />
+            <Box sx={{ border: 1, borderRadius: '50%', width: '142px', height: '142px' }}>
+              <Image src="/profile.png" alt="プロフィール写真" width={140} height={140} />
             </Box>
             <div className={stylesProfile.snsFlex}>
-              <FacebookIcon fontSize="large" />
-              <TwitterIcon fontSize="large" />
-              <EmailIcon fontSize="large" />
+              <Link href="https://www.facebook.com/yoshihiro.tada.718/" target="_blank" rel="noopener noreferrer">
+                <FacebookIcon fontSize="large" />
+              </Link>
+              <Link href="https://twitter.com/yoshihirotada1" target="_blank" rel="noopener noreferrer">
+                <TwitterIcon fontSize="large" />
+              </Link>
+              <Link href="mailto:shyuwatx@gmail.com" target="_blank" rel="noopener noreferrer">
+                <EmailIcon fontSize="large" />
+              </Link>
               <Link href="https://github.com/yoshihiro-tada" target="_blank" rel="noopener noreferrer">
                 <GitHubIcon fontSize="large" />
               </Link>
             </div>
           </div>
-          <p className={stylesProfile.introduction}>
-            多田吉宏です。
-            現在、地元香川の手袋会社『
-            <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
-              株式会社フクシン
-            </Link>』でWEBデザイナーとして働いています。
-            こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
-            詳しくは<Link href="/">こちら</Link>からご確認ください。
-          </p>
+          <Card sx={{ minWidth: 275, mt: "1rem" }}>
+            <CardContent>
+              <p className={stylesProfile.introduction}>
+                多田吉宏です。
+                現在、地元香川の手袋会社『
+                <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
+                  株式会社フクシン
+                </Link>』でWEBデザイナーとして働いています。
+                こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
+                詳しくは<Link href="/">こちら</Link>からご確認ください。
+              </p>
+            </CardContent>
+          </Card>
         </section>
+        <Divider />
         <section className={styles.section}>
-          <h2>History</h2>
-
+          <h2 className={stylesProfile.history}>History</h2>
           <Timeline
-      sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }}
-    >
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: 3, mb: 4 }}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <h3>誕生</h3>
-              <time>1991/07/10</time>
-              <p>香川県で生まれました。</p>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
+          sx={{
+            [`& .${timelineItemClasses.root}:before`]: {
+              flex: 0,
+              padding: 0,
+            },
+          }}
+          >
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                <Card sx={{ minWidth: 275 }}>
+                  <CardContent>
+                    <h3>誕生</h3>
+                    <time>1991/07/10</time>
+                    <p>香川県で生まれました。</p>
+                  </CardContent>
+                </Card>
+              </TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: 3, mb: 4 }}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <h3>高知工科大学 入学•卒業</h3>
-              <time>2011/04 to 2015/03</time>
-              <p>
-                幼い頃から自然環境や生物に興味があり、環境理工学群に進学しました。
-                生物•化学を中心に専攻し、海藻の成分からバイオ燃料を生成する研究をしていました。
-              </p>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                <Card sx={{ minWidth: 275 }}>
+                  <CardContent>
+                    <h3>高知工科大学 入学•卒業</h3>
+                    <time>2011/04 to 2015/03</time>
+                    <p>
+                      幼い頃から自然環境や生物に興味があり、環境理工学群に進学しました。
+                      生物•化学を中心に専攻し、海藻の成分からバイオ燃料を生成する研究をしていました。
+                    </p>
+                  </CardContent>
+                </Card>
+              </TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: 3, mb: 4 }}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <h3>モラブ阪神工業株式会社 入社•辞職</h3>
-              <time>2015/04 to 2019/09</time>
-              <p>
-                SESの企業に入社しました。学生時代はITに触れる機会はそれほどありませんでしたが、社会人研修のExcel•VBA研修を通じてITに興味を持つようになりました。<br></br>
-                やはりSESという業務形態なので、思うようなスキルの向上が難しく、たまたま興味を持ったLinux(Ubuntu)を使ってどんなコマンドがあるのか学習したり、ローカルのファイルサーバーを立ち上げてリモート接続を試してみたりしました。
-                次にHTML/CSSに興味を持ち、JavaScript(JQuery)、PHP(WordPress)...というようにWebに関係した技術の学習を進めていきました。ある程度学習が進んだ段階で、地元でWebデザイナー•フロントエンジニアとして働きたいと思い辞職しました。
-              </p>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                <Card sx={{ minWidth: 275 }}>
+                  <CardContent>
+                    <h3>モラブ阪神工業株式会社 入社•辞職</h3>
+                    <time>2015/04 to 2019/09</time>
+                    <p>
+                      SESの企業に入社しました。学生時代はITに触れる機会はそれほどありませんでしたが、社会人研修のExcel•VBA研修を通じてITに興味を持つようになりました。<br></br>
+                      やはりSESという業務形態なので、思うようなスキルの向上が難しく、たまたま興味を持ったLinux(Ubuntu)を使ってどんなコマンドがあるのか学習したり、ローカルのファイルサーバーを立ち上げてリモート接続を試してみたりしました。
+                      次にHTML/CSSに興味を持ち、JavaScript(JQuery)、PHP(WordPress)...というようにWebに関係した技術の学習を進めていきました。ある程度学習が進んだ段階で、地元でWebデザイナー•フロントエンジニアとして働きたいと思い辞職しました。
+                    </p>
+                  </CardContent>
+                </Card>
+              </TimelineContent>
+            </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: 3, mb: 4 }}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <h3>株式会社フクシン 入社</h3>
-              <time>2020/06</time>
-              <p>
-                コロナ禍という背景もありながら、なんとか就職することができました。
-                WordPressを使えるということもあり、入社当初から企業サイトのリニューアルを任せていただきました。
-                今では企業サイトを含めた複数のサイトの更新、SNSの運用、インフルエンサーマーケティング、クラウドファンディングの管理、通販サイト(パッケージ型:futureshop)の管理などに携わっています。
-              </p>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
-      
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: 3, mb: 4 }}>
-          <Card sx={{ minWidth: 275 }}>
-            <CardContent>
-              <h3>香川コーディングブートキャンプ 受講</h3>
-              <time>2022/07 to 2022/11</time>
-              <p>
-                4ヶ月間のブートキャンプに参加しました。
-                受講のきっかけは、社内業務だけだとどうしてもモダンな開発に触れる機会がなく、Webに関する理解のある社員も自分だけだったので次第にスキルの頭打ち感やもどかしさを感じたためです。
-                受講により得たものは多かったですが、特にMVCの考え方やチーム開発の進め方などが非常に学びが大きかったです。
-              </p>
-            </CardContent>
-          </Card>
-        </TimelineContent>
-      </TimelineItem>
-
-    </Timeline>
-
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                <Card sx={{ minWidth: 275 }}>
+                  <CardContent>
+                    <h3>株式会社フクシン 入社</h3>
+                    <time>2020/06</time>
+                    <p>
+                      コロナ禍という背景もありながら、なんとか就職することができました。
+                      WordPressを使えるということもあり、入社当初から企業サイトのリニューアルを任せていただきました。
+                      今では企業サイトを含めた複数のサイトの更新、SNSの運用、インフルエンサーマーケティング、クラウドファンディングの管理、通販サイト(パッケージ型:futureshop)の管理などに携わっています。
+                    </p>
+                  </CardContent>
+                </Card>
+              </TimelineContent>
+            </TimelineItem>
+            
+            <TimelineItem>
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                <Card sx={{ minWidth: 275 }}>
+                  <CardContent>
+                    <h3>香川コーディングブートキャンプ 受講</h3>
+                    <time>2022/07 to 2022/11</time>
+                    <p>
+                      4ヶ月間のブートキャンプに参加しました。
+                      受講のきっかけは、社内業務だけだとどうしてもモダンな開発に触れる機会がなく、Webに関する理解のある社員も自分だけだったので次第にスキルの頭打ち感やもどかしさを感じたためです。
+                      受講により得たものは多かったですが、特にMVCの考え方やチーム開発の進め方などが非常に学びが大きかったです。
+                    </p>
+                  </CardContent>
+                </Card>
+              </TimelineContent>
+            </TimelineItem>
+          </Timeline>
         </section>
       </main>
       <Divider variant="middle" />

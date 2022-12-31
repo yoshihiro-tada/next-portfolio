@@ -11,10 +11,11 @@
 .snsFlex svg{
   margin-right: 1rem;
 }
-
+/*
 .introduction{
   padding: 1.25rem 1rem 1rem;
 }
+*/
 .introduction a{
   color:deepskyblue;
   padding: 0 0.25rem;
@@ -33,4 +34,9 @@
 }
 .introduction a:hover::after {
   width: 100%;
+}
+
+/* History */
+.history{
+  margin-top: 1rem;
 }

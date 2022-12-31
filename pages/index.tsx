@@ -1,5 +1,3 @@
-import Layout from '../components/layout'
-import NestedLayout from '../components/nested-layout'
 
 import Link from 'next/link';
 

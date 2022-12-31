@@ -1,5 +1,19 @@
+/* Profile */
+.profileFlex{
+  display: flex;
+  margin: 1rem 0 0 1rem;
+  align-items: flex-end;
+}
+.snsFlex{
+  display: flex;
+  margin-left: 2rem;
+}
+.snsFlex svg{
+  margin-right: 1rem;
+}
+
 .introduction{
-  padding: 1rem;
+  padding: 1.25rem 1.5rem 1rem;
 }
 .introduction a{
   color:deepskyblue;

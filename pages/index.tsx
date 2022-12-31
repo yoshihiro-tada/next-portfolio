@@ -16,6 +16,14 @@ import CardContent from '@mui/material/CardContent';
 /* Icon */
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+/* Box */
+import Box from '@mui/material/Box';
+
 /* Timeline */
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
@@ -37,18 +45,27 @@ export default function Home() {
         <h1>Portfolio Site</h1>
         <nav className={styles.nav}>
           <ul>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Posts</a></li>
+            <li><a href="/">Profile</a></li>
+            <li><a href="/works">Works</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <li><a href="/posts">Posts</a></li>
           </ul>
         </nav>
       </header>
       <main className={styles.main}>
         <section className={styles.section}>
           <h2>Profile</h2>
-          <p>画像</p>
-          <p>SNSアイコン</p>
+          <div className={stylesProfile.profileFlex}>
+            <Box sx={{ border: 1, borderRadius: '50%', width: '202px', height: '202px' }}>
+              <Image src="/profile.png" alt="プロフィール写真" width={200} height={200} />
+            </Box>
+            <div className={stylesProfile.snsFlex}>
+              <FacebookIcon fontSize="large" />
+              <TwitterIcon fontSize="large" />
+              <EmailIcon fontSize="large" />
+              <GitHubIcon fontSize="large" />
+            </div>
+          </div>
           <p className={stylesProfile.introduction}>
             多田吉宏です。
             現在、地元香川の手袋会社『

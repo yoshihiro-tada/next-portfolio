@@ -11,11 +11,9 @@
 .snsFlex svg{
   margin-right: 1rem;
 }
-/*
 .introduction{
-  padding: 1.25rem 1rem 1rem;
+  font-size:0.875rem;
 }
-*/
 .introduction a{
   color:deepskyblue;
   padding: 0 0.25rem;
@@ -39,4 +37,12 @@
 /* History */
 .history{
   margin-top: 1rem;
+}
+.time{
+  font-size:0.75rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.historyContent p{
+  font-size:0.875rem;
 }

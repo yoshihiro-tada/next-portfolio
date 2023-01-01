@@ -30,49 +30,49 @@ const SKILLS = [
     image_src: "/skills/html_css.png",
     alt: "html/css logo",
     name: "THML/CSS",
-    rating: "4",
+    rating: "{4}",
     content: "正しいタグの使い方を意識したコーディング、レスポンシブデザインなどが可能です。"
   },
   {
     image_src: "/skills/jquery.png",
     alt: "JQuery logo",
     name: "JavaScript(Plane,JQuery)",
-    rating: "3",
+    rating: "{3}",
     content: "基本的な構文であれば記述できます。"
   },
   {
     image_src: "/skills/wordpress.png",
     alt: "WordPress logo",
     name: "PHP(WordPress)",
-    rating: "4",
+    rating: "{4}",
     content: "テーマの作成や、PHPを記述して機能を追加することも可能です。可能な限りプラグインを使用しない開発を心がけています。"
   },
   {
     image_src: "/skills/nextjs.png",
     alt: "Next.js logo",
     name: "JavaScript(FW)",
-    rating: "3",
+    rating: "{3}",
     content: "使用経験だけであれば、Angular、 Vue.js、React、Gatsby.jsなどがあります。只今 Next.jsを中心に学習しています。"
   },
   {
     image_src: "/skills/rails.png",
     alt: "Ruby on Rails logo",
     name: "Ruby(on Rails)",
-    rating: "3",
+    rating: "{3}",
     content: "MVCに則った記述が可能です。APIモードでの作成はまだしたことがありません。"
   },
   {
     image_src: "/skills/nestjs.svg",
     alt: "Nest.js logo",
     name: "Nest.js",
-    rating: "2",
+    rating: "{2}",
     content: "Next.jsと同じく TypeScriptで書けると言うので只今学習中です。"
   },
   {
     image_src: "/skills/ubuntu.png",
     alt: "Ubuntu logo",
     name: "Linux(Ubuntu,Raspberry Pi)",
-    rating: "3",
+    rating: "{3}",
     content: "コマンド操作、ファイルサーバーの構築などが可能です。OSをマシンにインストールした経験もあります。Raspberry Piを使用した経験もあります。"
   }
 ]

@@ -86,56 +86,58 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={stylesSkills.header}>
-        <p>Portfolio Site</p>
-        <nav className={styles.nav}>
-          <ul>
-            <li><a href="/">Profile</a></li>
-            <li><a href="/works">Works</a></li>
-            <li><a href="/skills">Skills</a></li>
-            <li><a href="/posts">Posts</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main className={styles.main}>
-        <section className={styles.section}>
-          <h1>Skills</h1>
-          <div className={stylesSkills.skillsFlex}>
+      <div className={styles.layout}>
+        <header className={stylesSkills.header}>
+          <p>Portfolio Site</p>
+          <nav className={styles.nav}>
+            <ul>
+              <li><a href="/">Profile</a></li>
+              <li><a href="/works">Works</a></li>
+              <li><a href="/skills">Skills</a></li>
+              <li><a href="/posts">Posts</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main className={styles.main}>
+          <section className={styles.section}>
+            <h1>Skills</h1>
+            <div className={stylesSkills.skillsFlex}>
 
-            {SKILLS.map(skill => {
-              return (
-                <Card sx={{ minWidth: 275, mt: "1rem" }}>
-                <CardContent>
-                  <div className={stylesSkills.iconNameRatingFlex}>
-                    <Image
-                      src={skill.image_src}
-                      width={140}
-                      height={140}
-                      alt={skill.alt}>
-                    </Image>
-                    <div className={stylesSkills.skillsName_Rating}>
-                      <h2>{skill.name}</h2>
-                      <Rating
-                        name="read-only"
-                        defaultValue={skill.rating}
-                        readOnly />
+              {SKILLS.map(skill => {
+                return (
+                  <Card sx={{ minWidth: 275, mt: "1rem" }}>
+                  <CardContent>
+                    <div className={stylesSkills.iconNameRatingFlex}>
+                      <Image
+                        src={skill.image_src}
+                        width={140}
+                        height={140}
+                        alt={skill.alt}>
+                      </Image>
+                      <div className={stylesSkills.skillsName_Rating}>
+                        <h2>{skill.name}</h2>
+                        <Rating
+                          name="read-only"
+                          defaultValue={{skill.rating}}
+                          readOnly />
+                      </div>
                     </div>
-                  </div>
-                  <p className={stylesSkills.introduction}>
-                    {skill.content}
-                  </p>
-                </CardContent>
-              </Card>
-              );
-            })}
+                    <p className={stylesSkills.introduction}>
+                      {skill.content}
+                    </p>
+                  </CardContent>
+                </Card>
+                );
+              })}
 
-          </div>
-        </section>
-      </main>
-      <Divider variant="middle" />
-      <footer className={styles.footer}>
-        <small>&copy; Yoshihiro Tada 2022</small>
-      </footer>
+            </div>
+          </section>
+        </main>
+        <Divider variant="middle" />
+        <footer className={styles.footer}>
+          <small>&copy; Yoshihiro Tada 2022</small>
+        </footer>
+      </div>
     </>
   )
 }

@@ -117,7 +117,7 @@ export default function Home() {
                       <h2>{skill.name}</h2>
                       <Rating
                         name="read-only"
-                        defaultValue={skill.rating}
+                        defaultValue={{skill.rating}
                         readOnly />
                     </div>
                   </div>

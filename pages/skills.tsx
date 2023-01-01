@@ -101,6 +101,7 @@ export default function Home() {
         <section className={styles.section}>
           <h1>Skills</h1>
           <div className={stylesSkills.skillsFlex}>
+
             {SKILLS.map(skill => {
               return (
                 <Card sx={{ minWidth: 275, mt: "1rem" }}>
@@ -116,7 +117,7 @@ export default function Home() {
                       <h2>{skill.name}</h2>
                       <Rating
                         name="read-only"
-                        defaultValue={ {skill.rating} }
+                        defaultValue={skill.rating}
                         readOnly />
                     </div>
                   </div>
@@ -127,6 +128,7 @@ export default function Home() {
               </Card>
               );
             })}
+
           </div>
         </section>
       </main>

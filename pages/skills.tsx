@@ -123,7 +123,7 @@ export default function Home() {
                       </div>
                     </div>
                     <p className={stylesSkills.introduction}>
-                      {skill.content}{skill.rating}
+                      {skill.content}
                     </p>
                   </CardContent>
                 </Card>

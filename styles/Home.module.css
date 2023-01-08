@@ -3,6 +3,10 @@
   min-height: 89.5vh;
 }
 
+.header{
+  padding: 1.25rem 1rem 1rem;
+}
+
 .layout {
   max-width: 800px;
   margin: 0 auto;

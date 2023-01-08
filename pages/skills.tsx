@@ -87,8 +87,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.layout}>
-        <header className={stylesSkills.header}>
-          <p>Portfolio Site</p>
+        <header className={styles.header}>
+          <p className={stylesSkills.main}>Skills</p>
           <nav className={styles.nav}>
             <ul>
               <li><a href="/">Profile</a></li>
@@ -131,6 +131,17 @@ export default function Home() {
               })}
 
             </div>
+          </section>
+          <section>
+            <h2>Tools</h2>
+            <p>その他以下、ツールの使用経験があります。</p>
+            <Card sx={{ minWidth: 275, mt: "1rem" }}>
+                  <CardContent>
+                    <p className={stylesSkills.introduction}>
+                      Git,GitHub,GitHub for Desktop,Slack,Zoom,Google Meet,Notion, VScode,...
+                    </p>
+                  </CardContent>
+                </Card>
           </section>
         </main>
         <Divider variant="middle" />

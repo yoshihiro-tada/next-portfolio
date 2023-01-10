@@ -57,7 +57,7 @@ export default function Home() {
           <section className={styles.section}>
             <h1>Works</h1>
             <div className={stylesSkills.skillsFlex}>
-                  <ImageList sx={{ width: 800, height: 800 }}>
+                  <ImageList sx={{ maxWidth: 800, height: 800 }}>
                     {itemData.map((item) => (
                       <ImageListItem key={item.img}>
                         <img

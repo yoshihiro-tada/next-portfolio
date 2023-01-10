@@ -1,6 +1,8 @@
 
 import Link from 'next/link';
 
+import { client } from "../libs/client";
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -33,7 +35,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { StylesContext } from '@material-ui/styles';
 
-export default function Home() {
+export default function Home({history}) {
   return (
     <>
       <Head>
@@ -101,114 +103,25 @@ export default function Home() {
               },
             }}
             >
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ mt: 3, mb: 4 }}>
-                  <Card sx={{ minWidth: 275 }}>
-                    <CardContent>
-                      <h3>誕生</h3>
-                      <time className={stylesProfile.time}>1991/07/10</time>
-                      <div className={stylesProfile.historyContent}>
-                        <p>香川県で生まれました。</p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ mt: 3, mb: 4 }}>
-                  <Card sx={{ minWidth: 275 }}>
-                    <CardContent>
-                      <h3>高知工科大学 入学•卒業</h3>
-                      <time className={stylesProfile.time}>2011/04 to 2015/03</time>
-                      <div className={stylesProfile.historyContent}>
-                        <p>
-                          幼い頃から自然環境や生物に興味があり、環境理工学群に進学しました。
-                          生物•化学を中心に専攻し、海藻の成分からバイオ燃料を生成する研究をしていました。
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ mt: 3, mb: 4 }}>
-                  <Card sx={{ minWidth: 275 }}>
-                    <CardContent>
-                      <h3>モラブ阪神工業株式会社 入社•辞職</h3>
-                      <time className={stylesProfile.time}>2015/04 to 2019/09</time>
-                      <div className={stylesProfile.historyContent}>
-                        <p>
-                          SESの企業に入社しました。学生時代はITに触れる機会はそれほどありませんでしたが、社会人研修のExcel•VBA研修を通じてITに興味を持つようになりました。<br></br>
-                        </p>
-                        <p>
-                          やはりSESという業務形態なので、思うようなスキルの向上が難しく、たまたま興味を持ったLinux(Ubuntu)を使ってどんなコマンドがあるのか学習したり、ローカルのファイルサーバーを立ち上げてリモート接続を試してみたりしました。
-                          次にHTML/CSSに興味を持ち、JavaScript(JQuery)、PHP(WordPress)...というようにWebに関係した技術の学習を進めていきました。ある程度学習が進んだ段階で、地元でWebデザイナー•フロントエンジニアとして働きたいと思い辞職しました。
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ mt: 3, mb: 4 }}>
-                  <Card sx={{ minWidth: 275 }}>
-                    <CardContent>
-                      <h3>株式会社フクシン 入社</h3>
-                      <time className={stylesProfile.time}>2020/06</time>
-                      <div className={stylesProfile.historyContent}>
-                        <p>
-                          コロナ禍という背景もありながら、なんとか就職することができました。
-                          WordPressを使えるということもあり、入社当初から企業サイトのリニューアルを任せていただきました。
-                        </p>
-                        <p>
-                          今では企業サイトを含めた複数のサイトの更新、SNSの運用、インフルエンサーマーケティング、クラウドファンディングの管理、通販サイト(パッケージ型:futureshop)の管理などに携わっています。
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TimelineContent>
-              </TimelineItem>
-              
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot />
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ mt: 3, mb: 4 }}>
-                  <Card sx={{ minWidth: 275 }}>
-                    <CardContent>
-                      <h3>香川コーディングブートキャンプ 受講</h3>
-                      <time className={stylesProfile.time}>2022/07 to 2022/11</time>
-                      <div className={stylesProfile.historyContent}>
-                        <p>
-                          4ヶ月間のブートキャンプに参加しました。
-                          受講のきっかけは、社内業務だけだとどうしてもモダンな開発に触れる機会がなく、Webに関する理解のある社員も自分だけだったので次第にスキルの頭打ち感やもどかしさを感じたためです。
-                          受講により得たものは多かったですが、特にMVCの考え方やチーム開発の進め方などが非常に学びが大きかったです。
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </TimelineContent>
-              </TimelineItem>
+              {history.map((history) => (
+                              <TimelineItem>
+                              <TimelineSeparator>
+                                <TimelineDot />
+                                <TimelineConnector />
+                              </TimelineSeparator>
+                              <TimelineContent sx={{ mt: 3, mb: 4 }}>
+                                <Card sx={{ minWidth: 275 }}>
+                                  <CardContent>
+                                    <h3>{history.event}</h3>
+                                    <time className={stylesProfile.time}>{history.date}</time>
+                                    <div className={stylesProfile.historyContent}>
+                                      <p>{history.overview}</p>
+                                    </div>
+                                  </CardContent>
+                                </Card>
+                              </TimelineContent>
+                            </TimelineItem>
+              ))}
             </Timeline>
           </section>
         </main>
@@ -220,3 +133,13 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "history" });
+
+  return {
+    props: {
+      history: data.contents,
+    },
+  };
+};

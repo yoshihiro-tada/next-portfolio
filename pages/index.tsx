@@ -35,7 +35,11 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { StylesContext } from '@material-ui/styles';
 
-export default function Home({history}) {
+type Prop = {
+  history: any,
+}
+
+export default function Home({ history }:Prop) {
   return (
     <>
       <Head>
@@ -103,7 +107,7 @@ export default function Home({history}) {
               },
             }}
             >
-              {history.map((history) => (
+              {history.map((history:any) => (
                               <TimelineItem>
                               <TimelineSeparator>
                                 <TimelineDot />

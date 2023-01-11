@@ -7,6 +7,11 @@
 .snsFlex{
   display: flex;
   margin-left: 1.25rem;
+  color: deepskyblue;
+  transition: 0.5s all;
+}
+.snsFlex a:hover{
+  color: dodgerblue;
 }
 .snsFlex svg{
   margin-right: 1rem;

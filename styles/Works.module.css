@@ -9,7 +9,10 @@ p.main {
 /* Profile */
 @media screen and (max-width:600px){
 
-  .imageGrid,.css-hrkxab{
+  .imageGrid{
+    display: block;
+  }
+  .css-hrkxab{
     display: block;
   }
 }

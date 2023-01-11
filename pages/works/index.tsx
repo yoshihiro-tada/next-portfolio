@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 /* CSS */
 import styles from '../../styles/Home.module.css'
-import stylesSkills from '../../styles/Skills.module.css'
+import stylesWorks from '../../styles/Works.module.css'
 
 /* MUI */
 import Divider from '@mui/material/Divider';
@@ -43,7 +43,7 @@ export default function Home() {
       </Head>
       <div className={styles.layout}>
         <header className={styles.header}>
-          <p className={stylesSkills.main}>Works</p>
+          <p className={stylesWorks.main}>Works</p>
           <nav className={styles.nav}>
             <ul>
               <li><a href="/">Profile</a></li>
@@ -55,9 +55,9 @@ export default function Home() {
         </header>
         <main className={styles.main}>
           <section className={styles.section}>
-            <h1>Works</h1>
-            <div className={stylesSkills.skillsFlex}>
-                  <ImageList sx={{ maxWidth: 800, height: 800 }}>
+            <h1 className={stylesWorks.h1}>Works</h1>
+            <div className={stylesWorks.skillsFlex}>
+                  <ImageList sx={{ maxWidth: 800, height: 800 }}  className={stylesWorks.imageGrid}>
                     {itemData.map((item) => (
                       <ImageListItem key={item.img}>
                         <img

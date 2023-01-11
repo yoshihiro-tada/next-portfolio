@@ -88,7 +88,7 @@ export default function Home({ history }:Prop) {
                   多田吉宏です。
                   現在、地元香川の手袋会社『
                   <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
-                    株式会社フクシン
+                    株式会社フクシン<OpenInNewIcon fontSize="10px" />
                   </Link>』でWEBデザイナーとして働いています。
                   こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
                   詳しくは<Link href="/">こちら</Link>からご確認ください。

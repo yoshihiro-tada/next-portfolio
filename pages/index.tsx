@@ -1,14 +1,17 @@
 
 import Link from 'next/link';
-
-import { client } from "../libs/client";
-
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import stylesProfile from '../styles/Profile.module.css'
 
-/* MUI */
+/* microCMS */
+import { client } from "../libs/client";
+
+/*~~~~~~~~~
+  ▼MUI
+ ~~~~~~~~*/
+/* Diver */
 import Divider from '@mui/material/Divider';
 
 /* Card */
@@ -17,7 +20,6 @@ import CardContent from '@mui/material/CardContent';
 
 /* Icon */
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import EmailIcon from '@mui/icons-material/Email';
@@ -34,7 +36,11 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { StylesContext } from '@material-ui/styles';
+/*~~~~~~~~~
+  ▲MUI
+ ~~~~~~~~*/
 
+ /* microCMS※デプロイでエラー吐くので型定義 */
 type Prop = {
   history: any,
 }
@@ -138,6 +144,7 @@ export default function Home({ history }:Prop) {
   )
 }
 
+/* microCMS */
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "history" });
 

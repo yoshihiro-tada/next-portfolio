@@ -10,10 +10,10 @@ p.main {
 @media screen and (max-width:600px){
 
   .imageGrid{
-    display: block;
+    display: block !important;
   }
   .css-hrkxab{
-    display: block;
+    display: block !important;
   }
 }
 

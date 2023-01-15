@@ -15,6 +15,7 @@ export default class Document extends NextDocument {
           <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
           <meta property="og:image" content="https://next-portfolio-eight-flame.vercel.app/ogp/ogp.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <body>
           <Main />

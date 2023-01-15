@@ -6,6 +6,10 @@ p.main {
 .h1{
   margin-bottom: 0.5rem;
 }
+.thum{
+  width: 100%;
+  height: auto;
+}
 /* Profile */
 @media screen and (max-width:600px){
 

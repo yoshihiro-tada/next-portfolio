@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Head from 'next/head'
 import Image from 'next/image'
 
+/* microCMS */
+import { client } from "../../libs/client";
+
 /* CSS */
 import styles from '../../styles/Home.module.css'
 import stylesWorks from '../../styles/Works.module.css'
@@ -32,7 +35,12 @@ import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
 
-export default function Home() {
+/* microCMS※デプロイでエラー吐くので型定義 */
+type Prop = {
+  works: any,
+}
+
+export default function Home({ works }:Prop) {
   return (
     <>
       <Head>
@@ -58,26 +66,32 @@ export default function Home() {
             <h1 className={stylesWorks.h1}>Works</h1>
             <div className={stylesWorks.skillsFlex}>
                   <ImageList sx={{ maxWidth: 800, height: 800 }}  className={stylesWorks.imageGrid}>
-                    {itemData.map((item) => (
-                      <ImageListItem key={item.img}>
-                        <img
-                          src={`${item.img}?w=248&fit=crop&auto=format`}
-                          srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                          alt={item.title}
-                          loading="lazy"
-                        />
+                  {works.map((works:any) => (
+                      <ImageListItem key={works}>
+                        <Link href={works.link}>
+                          <Image
+                            src={works.imageLink}
+                            height={400}
+                            width={400}
+                            alt={works.title}
+                            className={stylesWorks.thum}
+                          >
+                        </Image>
+                        </Link>
                         <ImageListItemBar
-                          title={item.title}
-                          subtitle={item.author}
+                          title={works.title}
+                          subtitle={works.subtitle}   
                           actionIcon={
                             <IconButton
                               sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                              aria-label={`info about ${item.title}`}
-                            ><InfoIcon />
+                              aria-label={`info about ${works.title}`}
+                            >
+                              <InfoIcon />
                             </IconButton>
                           }
                         />
                       </ImageListItem>
+
                     ))}
                   </ImageList>
             </div>
@@ -154,3 +168,14 @@ const itemData = [
     author: '@southside_customs',
   },
 ];
+
+/* microCMS */
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "works" });
+
+  return {
+    props: {
+      works: data.contents,
+    },
+  };
+};

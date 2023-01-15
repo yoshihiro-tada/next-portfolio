@@ -7,18 +7,22 @@ p.main {
 
 .skillsFlex h2{
   font-size: 1.25rem;
+  overflow-wrap: anywhere;
 }
 
-.iconNameRatingFlex{
-  display: flex;
-}
 .iconNameRatingFlex{
   display: flex;
   margin-bottom: 0.5rem;
   align-items: center;
 }
+.iconNameRatingFlex img{
+  width: 30%;
+  max-width: 100px;
+  height: auto;
+}
 .skillsName_Rating{
-  margin-left: 2rem;
+  margin-left: 1rem;
+  width: 70%;
 }
 
 /* tac,pc */

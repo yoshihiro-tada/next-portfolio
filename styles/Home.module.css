@@ -10,7 +10,6 @@
 .layout {
   max-width: 800px;
   margin: 0 auto;
-  background: whitesmoke;
 }
 
 .header, .footer{
@@ -56,6 +55,7 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+/*
   .content {
     padding: 4rem;
   }
@@ -129,10 +129,12 @@
     );
     z-index: 1;
   }
+*/
 }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
+/*
   .grid {
     grid-template-columns: repeat(2, 50%);
   }
@@ -156,4 +158,5 @@
   to {
     transform: rotate(0deg);
   }
+*/
 }

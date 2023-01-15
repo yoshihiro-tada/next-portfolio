@@ -92,7 +92,7 @@ export default function Home({ history }:Prop) {
             <Card sx={{ minWidth: 275, mt: "1rem" }}>
               <CardContent>
                 <p className={stylesProfile.introduction}>
-                  多田吉宏です。
+                  多田吉宏です。<br></br>
                   現在、地元香川の手袋会社『
                   <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
                     株式会社フクシン<OpenInNewIcon sx={{ fontSize: 14 }} />

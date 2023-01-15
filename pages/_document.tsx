@@ -14,7 +14,7 @@ export default class Document extends NextDocument {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
           <meta name="theme-color" content="#ffffff" />
-          <meta property="og:image" content="https://next-portfolio-8v7dc2zu9-yoshihiro-tada/ogp/ogp.jpg" />
+          <meta property="og:image" content="https://next-portfolio-eight-flame.vercel.app/ogp/ogp.jpg" />
         </Head>
         <body>
           <Main />

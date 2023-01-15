@@ -55,10 +55,6 @@ export default function Home({ history }:Prop) {
         title="Portfolio-Site | Yoshihiro Tada"
         description="こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。"
       />
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className={styles.layout}>
         <header className={styles.header}>
           <h1>Portfolio Site</h1>

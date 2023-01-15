@@ -1,8 +1,13 @@
 
 import Link from 'next/link';
-
 import Head from 'next/head'
 import Image from 'next/image'
+
+/* microCMS */
+import { client } from "../libs/client";
+
+/* SEO */
+import { NextSeo } from 'next-seo';
 
 /* CSS */
 import styles from '../styles/Home.module.css'
@@ -77,15 +82,18 @@ const SKILLS = [
   }
 ]
 
-export default function Home() {
+/* microCMS※デプロイでエラー吐くので型定義 */
+type Prop = {
+  skills: any,
+}
+
+export default function Home({ skills }:Prop) {
   return (
     <>
-      <Head>
-        <title>Portfolio-Site | Yoshihiro Tada</title>
-        <meta name="description" content="ポートフォリオサイトです。" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <NextSeo
+        title="Skills | Portfolio-Site | Yoshihiro Tada"
+        description="習得済み・習得中のスキルやツールの使用経験についてです。"
+      />
       <div className={styles.layout}>
         <header className={styles.header}>
           <p className={stylesSkills.main}>Skills</p>
@@ -103,32 +111,30 @@ export default function Home() {
             <h1>Skills</h1>
             <div className={stylesSkills.skillsFlex}>
 
-              {SKILLS.map(skill => {
-                return (
+            {skills.map((skills:any) => (
                   <Card sx={{ minWidth: 275, mt: "1rem" }}>
                   <CardContent>
                     <div className={stylesSkills.iconNameRatingFlex}>
                       <Image
-                        src={skill.image_src}
+                        src={skills.image.url}
                         width={140}
                         height={140}
-                        alt={skill.alt}>
+                        alt={skills.alt}>
                       </Image>
                       <div className={stylesSkills.skillsName_Rating}>
-                        <h2>{skill.name}</h2>
+                        <h2>{skills.name}</h2>
                         <Rating
                           name="read-only"
-                          value={parseInt(skill.rating)}
+                          value={parseInt(skills.rating)}
                           readOnly />
                       </div>
                     </div>
                     <p className={stylesSkills.introduction}>
-                      {skill.content}
+                      {skills.description}
                     </p>
                   </CardContent>
                 </Card>
-                );
-              })}
+              ))}
 
             </div>
           </section>
@@ -138,7 +144,7 @@ export default function Home() {
             <Card sx={{ minWidth: 275, mt: "1rem" }}>
                   <CardContent>
                     <p className={stylesSkills.introduction}>
-                      Git,GitHub,GitHub for Desktop,Slack,Zoom,Google Meet,Notion, VScode,...
+                      Git,GitHub,GitHub for Desktop,Slack,Zoom,Google Meet,Notion, VScode,Photoshop,Illustrator,...
                     </p>
                   </CardContent>
                 </Card>
@@ -152,3 +158,14 @@ export default function Home() {
     </>
   )
 }
+
+/* microCMS */
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "skills" });
+
+  return {
+    props: {
+      skills: data.contents,
+    },
+  };
+};

@@ -40,7 +40,7 @@ import { StylesContext } from '@material-ui/styles';
   ▲MUI
  ~~~~~~~~*/
 
- /* microCMS※デプロイでエラー吐くので型定義 */
+/* microCMS※デプロイでエラー吐くので型定義 */
 type Prop = {
   history: any,
 }

@@ -45,12 +45,17 @@ type Prop = {
   history: any,
 }
 
+/* SEO */
+import { NextSeo } from 'next-seo';
+
 export default function Home({ history }:Prop) {
   return (
     <>
+      <NextSeo
+        title="Portfolio-Site | Yoshihiro Tada"
+        description="こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。"
+      />
       <Head>
-        <title>Portfolio-Site | Yoshihiro Tada</title>
-        <meta name="description" content="ポートフォリオサイトです。" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

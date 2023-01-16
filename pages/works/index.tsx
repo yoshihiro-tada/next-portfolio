@@ -66,7 +66,7 @@ export default function Home({ works }:Prop) {
             <div className={stylesWorks.skillsFlex}>
                   <ImageList sx={{ maxWidth: 800, height: 800 }}  className={stylesWorks.imageGrid}>
                   {works.map((works:any) => (
-                      <ImageListItem key={works}>
+                      <ImageListItem key={works} className={stylesWorks.box}>
                         <Link href={works.link}>
                           <Image
                             src={works.imageLink}

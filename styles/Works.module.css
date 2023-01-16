@@ -10,6 +10,19 @@ p.main {
   width: 100%;
   height: auto;
 }
+.thum:hover{
+  transform:scale(1.2,1.2);
+  transition:1s all;
+}
+.box{
+  overflow:hidden;
+  box-shadow: 4px 4px 4px #bbb;
+}
+.imageGrid{
+  gap: 0.5rem !important;
+  padding-right: 1%;
+}
+
 /* Profile */
 @media screen and (max-width:600px){
 

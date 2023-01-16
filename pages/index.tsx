@@ -15,6 +15,9 @@ import { client } from "../libs/client";
 /* Diver */
 import Divider from '@mui/material/Divider';
 
+/* Avatar */
+import Avatar from '@mui/material/Avatar';
+
 /* Card */
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -72,9 +75,9 @@ export default function Home({ history }:Prop) {
           <section className={styles.section}>
             <h2>Profile</h2>
             <div className={stylesProfile.profileFlex}>
-              <Box sx={{ border: 1, borderRadius: '50%', width: '142px', height: '142px' }}>
-                <Image src="/profile.png" alt="プロフィール写真" width={140} height={140} />
-              </Box>
+                <Avatar alt="プロフィール写真" src="/profile.jpg"
+                  sx={{ width: 140, height: 140, boxShadow: 3 }}
+                />
               <div className={stylesProfile.snsFlex}>
                 <Link href="https://www.facebook.com/yoshihiro.tada.718/" target="_blank" rel="noopener noreferrer">
                   <FacebookIcon fontSize="large" />

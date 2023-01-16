@@ -80,15 +80,7 @@ export default function Home({ works }:Prop) {
                         </Link>
                         <ImageListItemBar
                           title={works.title}
-                          subtitle={works.subtitle}   
-                          actionIcon={
-                            <IconButton
-                              sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                              aria-label={`info about ${works.title}`}
-                            >
-                              <InfoIcon />
-                            </IconButton>
-                          }
+                          subtitle={works.subtitle}
                         />
                       </ImageListItem>
 

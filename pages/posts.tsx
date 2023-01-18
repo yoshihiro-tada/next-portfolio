@@ -55,12 +55,24 @@ export default function Home({ skills }:Prop) {
         <main className={styles.main}>
           <section className={styles.section}>
             <h1>Posts</h1>
-            <p className={stylesPosts.zennInfo}>
-            <Link href="https://zenn.dev/yoshihiro_tada" target="_blank" rel="noopener noreferrer">
-              Zennの投稿内容
-            </Link>
-            をAPIを用いて一覧表示させる予定です。</p>
+            <p className={stylesPosts.outputInfo}>
+              今後のアウトプットは
+              <Link href="https://zenn.dev/yoshihiro_tada" target="_blank" rel="noopener noreferrer">
+                Zenn
+              </Link>
+              にて行い、徐々にZennに移行いたします。<br></br>
+              また、これより以前にもレンタルサーバー上のWordPressのサイトにてアウトプットはしておりました。
+              以前のアウトプットは
+              <Link href="https://kotoura3-blog.com/blog/" target="_blank" rel="noopener noreferrer">
+                こちら
+              </Link>
+              よりご確認ください。
+            </p>
+            <p className={stylesPosts.outputInfo}>
+              今後の開発で、Zennの投稿内容をリスト表示させる予定です。
+            </p>
           </section>
+          <Divider variant="middle" />
         </main>
         <Divider variant="middle" />
         <footer className={styles.footer}>

@@ -1,0 +1,43 @@
+p.main {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+.thum{
+  width: 100%;
+  height: auto;
+  box-shadow: 4px 4px 4px #bbb;
+}
+.titles{
+  margin-bottom: 0.5rem;
+}
+.h1{
+  display: inline-block;
+  margin: 0.5rem 0 0;
+  padding-left: 0.5rem;
+}
+.worksLink{
+  color: deepskyblue;
+  margin-left: 0.5rem;
+}
+.subtitle{
+  line-height: 1.0;
+  padding-left: 0.75rem;
+}
+
+
+/* SP */
+@media screen and (max-width:600px){
+  .box{
+    margin-bottom: 1rem;
+  }
+  .imageGrid{
+    display: block !important;
+  }
+  .css-hrkxab{
+    display: block !important;
+  }
+  .Works_imageGrid__O_rKX {
+    display: block !important;
+  }
+}

@@ -4,8 +4,14 @@ p.main {
   font-weight: bold;
 }
 .h1{
-  margin-bottom: 0.5rem;
+/*  margin-bottom: 0.5rem; */
 }
+.worksInfo{
+  margin-bottom: 1rem;
+  line-height: 1.0;
+  display: block;
+}
+
 .thum{
   width: 100%;
   height: auto;

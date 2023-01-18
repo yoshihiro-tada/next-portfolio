@@ -93,6 +93,7 @@ export default function WorkId({ works }:Prop) {
             <h2>期間</h2>
             <p>{works.term}</p>
           </div>
+          <Divider variant="middle" className={stylesWorksDetail.hr}/>
           <div className={stylesWorksDetail.feature_wrap}>
             <h2>特徴</h2>
             <div className={stylesWorksDetail.feature}

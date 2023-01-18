@@ -63,6 +63,9 @@ export default function Home({ works }:Prop) {
         <main className={styles.main}>
           <section className={styles.section}>
             <h1 className={stylesWorks.h1}>Works</h1>
+            <small className={stylesWorks.worksInfo}>
+              ※時系列順に表示しています。
+            </small>
             <div className={stylesWorks.skillsFlex}>
                   <ImageList sx={{ maxWidth: 800, height: 800 }}  className={stylesWorks.imageGrid}>
                   {works.map((works:any) => (

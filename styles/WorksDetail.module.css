@@ -3,6 +3,9 @@ p.main {
   font-size: 2em;
   font-weight: bold;
 }
+.hr{
+  margin: auto 0 16px 0;
+}
 
 /*thum*/
 .thum{

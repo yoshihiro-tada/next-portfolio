@@ -45,7 +45,7 @@ export default function WorkId({ works }:Prop) {
   return (
     <>
       <NextSeo
-        title="`{works.title}` | Portfolio-Site | Yoshihiro Tada"
+        title="Works Detail | Portfolio-Site | Yoshihiro Tada"
         description="作品の詳細です。"
       />
       <div className={styles.layout}>

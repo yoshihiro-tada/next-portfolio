@@ -77,18 +77,30 @@ export default function WorkId({ works }:Prop) {
             </Link>
             <p className={stylesWorksDetail.subtitle}>{works.subtitle}</p>
           </div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${works.tech_stack}`,
-            }}
-          />
-          <div>{works.role}</div>
-          <div>{works.term}</div>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `${works.feature}`,
-            }}
-           />
+          <div className={stylesWorksDetail.tech_stack_wrap}>
+            <h2>技術スタック</h2>
+            <div className={stylesWorksDetail.tech_stack_content}
+              dangerouslySetInnerHTML={{
+                __html: `${works.tech_stack}`,
+              }}
+            />
+          </div>
+          <div className={stylesWorksDetail.role}>
+            <h2>役割</h2>
+            <p>{works.role}</p>
+          </div>
+          <div className={stylesWorksDetail.term}>
+            <h2>期間</h2>
+            <p>{works.term}</p>
+          </div>
+          <div className={stylesWorksDetail.feature_wrap}>
+            <h2>特徴</h2>
+            <div className={stylesWorksDetail.feature}
+              dangerouslySetInnerHTML={{
+                __html: `${works.feature}`,
+              }}
+            />
+          </div>
           </section>
         </main>
         <Divider variant="middle" />

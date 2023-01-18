@@ -3,13 +3,17 @@ p.main {
   font-size: 2em;
   font-weight: bold;
 }
+
+/*thum*/
 .thum{
   width: 100%;
   height: auto;
   box-shadow: 4px 4px 4px #bbb;
 }
+
+/*titles*/
 .titles{
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 .h1{
   display: inline-block;
@@ -25,6 +29,42 @@ p.main {
   padding-left: 0.75rem;
 }
 
+/*tech_stack*/
+.tech_stack_wrap,
+.role,.term,
+.feature_wrap{
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+.tech_stack_wrap h2,
+.role h2,.term h2,
+.feature_wrap h2{
+  font-size: 1.25rem;
+}
+.tech_stack_wrap p,
+.role p,.term p{
+  padding-left: 0.25rem;
+}
+
+/*feature*/
+.feature_wrap{
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+.feature_wrap h2{
+  font-size: 1.25rem;
+}
+.feature_wrap h3{
+  font-size: 1.125rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-left: 0.5rem solid #898989;
+  background-color: #eee;
+  box-shadow: 4px 4px 4px #bbb;
+}
+.feature_wrap p{
+  padding-left: 0.75rem;
+  margin: 1rem 0 2rem 0;
+}
 
 /* SP */
 @media screen and (max-width:600px){

@@ -67,7 +67,7 @@ export default function Home({ works }:Prop) {
                   <ImageList sx={{ maxWidth: 800, height: 800 }}  className={stylesWorks.imageGrid}>
                   {works.map((works:any) => (
                       <ImageListItem key={works} className={stylesWorks.box}>
-                        <Link href={works.link}>
+                        <Link href={`/works/${works.id}`}>
                           <Image
                             src={works.imageLink}
                             height={400}

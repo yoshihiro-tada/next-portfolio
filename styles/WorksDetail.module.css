@@ -3,10 +3,6 @@ p.main {
   font-size: 2em;
   font-weight: bold;
 }
-.hr,
-.css-ft4jij-MuiDivider-root{
-  margin: auto 0 16px 0;
-}
 .feature_wrap a,
 .WorksDetail_feature_wrap__KmwOd a{
   color:deepskyblue;
@@ -75,7 +71,7 @@ p.main {
 /*feature*/
 .feature_wrap{
   padding-left: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .feature_wrap h2{
   font-size: 1.25rem;

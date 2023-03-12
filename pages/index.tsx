@@ -99,7 +99,7 @@ export default function Home({ history }:Prop) {
                     株式会社フクシン<OpenInNewIcon sx={{ fontSize: 14 }} />
                   </Link>』でWEBデザイナーとして働いています。
                   こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
-                  詳しくは<Link href="/">こちら</Link>からご確認ください。
+                  詳しくは<Link href="https://next-portfolio-yoshihiro-tada.vercel.app/works/portfolio">こちら</Link>からご確認ください。
                 </p>
               </CardContent>
             </Card>

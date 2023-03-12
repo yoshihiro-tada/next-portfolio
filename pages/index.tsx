@@ -94,10 +94,10 @@ export default function Home({ history }:Prop) {
               <CardContent>
                 <p className={stylesProfile.introduction}>
                   多田吉宏です。<br></br>
-                  現在、地元香川の手袋会社『
+                  現在、
                   <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
-                    株式会社フクシン<OpenInNewIcon sx={{ fontSize: 14 }} />
-                  </Link>』でWEBデザイナーとして働いています。
+                    某株式会社<OpenInNewIcon sx={{ fontSize: 14 }} />
+                  </Link>にてWEB制作事業に携わっています。
                   こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
                   詳しくは<Link href="https://next-portfolio-yoshihiro-tada.vercel.app/works/portfolio">こちら</Link>からご確認ください。
                 </p>

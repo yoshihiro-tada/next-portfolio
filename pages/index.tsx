@@ -96,7 +96,7 @@ export default function Home({ history }:Prop) {
                   多田吉宏です。<br></br>
                   現在、
                   <Link href="https://www.fukushin.co.jp/" target="_blank" rel="noopener noreferrer">
-                    某株式会社<OpenInNewIcon sx={{ fontSize: 14 }} />
+                    某手袋総合商社<OpenInNewIcon sx={{ fontSize: 14 }} />
                   </Link>にてWEB制作事業に携わっています。
                   こちらのポートフォリオサイトは、 Next.jsで作りVercelにデプロイして公開しています。
                   詳しくは<Link href="https://next-portfolio-yoshihiro-tada.vercel.app/works/portfolio">こちら</Link>からご確認ください。
